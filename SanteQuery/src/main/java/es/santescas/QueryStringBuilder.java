@@ -4,8 +4,6 @@ import java.util.ArrayDeque;
 import java.util.Arrays;
 import java.util.Deque;
 
-import org.springframework.util.Assert;
-
 public class QueryStringBuilder {
 
 	protected StringBuilder internalRepresentation;
@@ -97,7 +95,7 @@ public class QueryStringBuilder {
 	}
 	
 	public QueryStringBuilder addComparison(String[] key,String[] values){
-		Assert.isTrue(key.length==values.length);
+		//Assert.isTrue(key.length==values.length);
 		if(mustPrint()){
 			for(int i=0;i<key.length;i++){
 				String currentKey=key[i];
