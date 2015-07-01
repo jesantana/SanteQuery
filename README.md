@@ -10,7 +10,7 @@ Para generar el siguiente fragmento de Query String
 donde isRent es un parametro obligatorio y adress tiene una cardinalidad de [0..n] quedaría como sigue:
 
     String listOfFilters=QueryStringBuilder.init()
-    	.openEnclosingSymbol("$filter=(")
+    	.openEnclosingSymbol("?filter=(")
     	.addComparison(isRent,"true")
     	.ifPrint(adresses.length>0)
     		.addDelimitationSymbol()
